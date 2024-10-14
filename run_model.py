@@ -7,6 +7,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 # Check if a GPU is available and select device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
+print("", flush=True)
 
 # Load the FLAN-T5-Small model and tokenizer from Hugging Face
 model_name = "google/flan-t5-small"
@@ -21,6 +22,7 @@ model.to(device)
 
 # Define the input text for the model
 input_text = "Translate the following English text to French: 'Hello, how are you?'"
+print("", flush=True)
 print(f"Input text: {input_text}")
 
 # Tokenize the input text
