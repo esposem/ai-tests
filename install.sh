@@ -1,4 +1,6 @@
 #! /bin/bash
 
-pip install sentencepiece torch torchvision torchaudio transformers
+pip3 install torch
+
+python3 /run_model.py
 

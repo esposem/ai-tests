@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cuda-eesposit-pp
+spec:
+  restartPolicy: Never
+  runtimeClassName: kata-remote
+  containers:
+    - name: cuda-eesposit
+      image: "quay.io/eesposit/gpu-test:latest"
+      command:
+        - sleep
+      args:
+        - infinity
